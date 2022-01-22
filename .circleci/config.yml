@@ -11,6 +11,10 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
+          name: Install CircleCI
+          command: |
+            sudo apt-get install awscli
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
