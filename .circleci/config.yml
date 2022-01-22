@@ -13,6 +13,7 @@ jobs:
       - run:
           name: Install EB CLI
           command: |
+            sudo apt-get install python-dev
             sudo apt-get install awsebcli
       - run:
           name: Front-End Install
