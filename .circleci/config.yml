@@ -11,7 +11,7 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
-          name: Install CircleCI
+          name: Install EB CLI
           command: |
             sudo apt-get install awscli
       - run:
