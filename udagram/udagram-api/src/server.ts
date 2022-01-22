@@ -10,13 +10,35 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
 (async () => {
   dotenv.config();
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
 
-  await sequelize.addModels(V0_FEED_MODELS);
-  await sequelize.addModels(V0_USER_MODELS);
-  await sequelize.sync();
+  } catch (error) {
+    console.log('Unable to connect to the database:', error);
+  }
+  try {
+    await sequelize.addModels(V0_FEED_MODELS);
 
-  console.log("Database Connected");
+  
+    console.log("Added feed model");
+  } catch (error) {
+    console.log("Unable to add Feed model")
+  }
+  try {
+    await sequelize.addModels(V0_USER_MODELS);
 
+  
+    console.log("Added user model");
+  } catch (error) {
+    console.log("Unable to add user model")
+  }
+  try {
+    await sequelize.sync();
+    console.log("Synced");
+  } catch (error) {
+    console.log("Unable to sync")
+  }
   const app = express();
   const port = process.env.PORT || 8080;
 
@@ -36,4 +58,6 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
     console.log(`server running ${process.env.URL}`);
     console.log(`press CTRL+C to stop server`);
   });
+
 })();
+

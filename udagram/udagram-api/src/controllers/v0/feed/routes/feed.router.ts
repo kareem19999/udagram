@@ -31,7 +31,7 @@ router.get('/', async (req: Request, res: Response) => {
   const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
   items.rows.map((item) => {
     if (item.url) {
-      item.url = AWS.getGetSignedUrl(item.url);
+      item.url =AWS.getGetSignedUrl(item.url);
     }
   });
   res.send(items);
@@ -75,8 +75,7 @@ router.post('/',
       });
 
       const savedItem = await item.save();
-
-      savedItem.url = AWS.getGetSignedUrl(savedItem.url);
+      savedItem.url =AWS.getGetSignedUrl(savedItem.url);
       res.status(201).send(savedItem);
     });
 
