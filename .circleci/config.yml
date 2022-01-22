@@ -30,14 +30,6 @@ jobs:
           command: |
             npm run frontend:build
       - run:
-          name: Front-End Test
-          command: |
-            npm run frontend:test
-      - run:
-          name: Front-End e2e
-          command: |
-            npm run frontend:e2e
-      - run:
           name: Back-End Build
           command: |
             npm run backend:build
