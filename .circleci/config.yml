@@ -15,7 +15,7 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install -y python3-pip python3-dev
-            sudo pip install awscli
+            sudo pip install awsebcli
             aws --version
       - run:
           name: Front-End Install
