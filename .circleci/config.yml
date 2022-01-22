@@ -17,26 +17,26 @@ jobs:
             sudo apt-get install -y python3-pip python3-dev
             sudo pip install awsebcli
             aws --version
-      # - run:
-      #     name: Front-End Install
-      #     command: |
-      #       npm run frontend:install
-      # - run:
-      #     name: Back-End Install
-      #     command: |
-      #       npm run backend:install
-      # - run:
-      #     name: Front-End Build
-      #     command: |
-      #       npm run frontend:build
-      # - run:
-      #     name: Back-End Build
-      #     command: |
-      #       npm run backend:build
-      # - run:
-      #     name: Deploy Front-End
-      #     command: |
-      #       npm run frontend:deploy
+      - run:
+          name: Front-End Install
+          command: |
+            npm run frontend:install
+      - run:
+          name: Back-End Install
+          command: |
+            npm run backend:install
+      - run:
+          name: Front-End Build
+          command: |
+            npm run frontend:build
+      - run:
+          name: Back-End Build
+          command: |
+            npm run backend:build
+      - run:
+          name: Deploy Front-End
+          command: |
+            npm run frontend:deploy
       - run:
           name: Deploy Back-End
           command: |
