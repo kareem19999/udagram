@@ -8,6 +8,7 @@ This project consists of 2 parts in terms of source code and 3 in terms of deplo
 
 ### Source Code
 1. Front-End: This is the UI of the application which uses the back-end to send/fetch data to/from database.
+![Front End](Screenshots/S3 Frontend Running.png)
 2. Back-End: This connects to the database and contains CRUD operations. It also deals with signing_urls for image storage.
 
 ### Deploying Infrastructure 
