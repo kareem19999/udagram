@@ -14,7 +14,7 @@
     "build-windows": "npm run clean-windows && tsc && copy src\\config www\\config && copy .npmrc www\\.npmrc && copy package.json www\\package.json && cd www && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-windows-full": "npm run build-windows && eb deploy",
-    "deploy": "eb deploy Udagramstuff-env"
+    "deploy": "chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
