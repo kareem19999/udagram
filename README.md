@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/kareem19999/udagram)
 # Documentation
 
 This is a documentation for Udagram. Very slightly modified version of the initial code on github for verbose purposes.
@@ -8,9 +9,11 @@ This project consists of 2 parts in terms of source code and 3 in terms of deplo
 
 ### Source Code
 1. Front-End: This is the UI of the application which uses the back-end to send/fetch data to/from database.
-![Front End](Screenshots/S3 Frontend Running.png)
-2. Back-End: This connects to the database and contains CRUD operations. It also deals with signing_urls for image storage.
 
+![Front End](/Screenshots/S3_Frontend_Running.png)
+
+2. Back-End: This connects to the database and contains CRUD operations. It also deals with signing_urls for image storage.
+![Back End](/Screenshots/API_Running.png)
 ### Deploying Infrastructure 
 1. Amazon S3: This is the storage servers for frontend, backend and the media.
 2. Amazon RDS: This is the database used in this project.
@@ -31,3 +34,6 @@ The pipeline is deployed on CircleCI and uses the following order. The top level
 7. Back-End Build: Builds the Back-End to be used for hosting.
 6. Front-End Deploy: Deploys Front-End to S3.
 7. Back-End Build: Deploys Back-End to Elastic Beanstalk.
+
+
+![Architecture Diagram](/Architecture_Diagram.png)
